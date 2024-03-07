@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todos_fetch_data_with_bloc/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,29 +11,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: HomeScreen(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
 
-
-
-
-@override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(''),
-      ),
-      body: Center(
-        
-      ),
-    );
-  }
-}

@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:todos_fetch_data_with_bloc/models/todo_model.dart';
 
 class CustomTodo extends StatelessWidget {
-  const CustomTodo({super.key});
+  const CustomTodo({super.key, required this.todoModel});
 
+  final TodoModel todoModel;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ListTile(
-        leading: CircleAvatar(
-          backgroundColor: Colors.blue, 
-          radius: 22,
-          child: Text('1'),),
-        title: Text('data'),
-      ),
-    );
+    return ListTile(
+          leading: CircleAvatar(
+            backgroundColor: Colors.blue, 
+            radius: 22,
+            child: Text(todoModel.id.toString()),),
+          title: Text(todoModel.title),
+        );
   }
 }

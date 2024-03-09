@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todos_fetch_data_with_bloc/widgets/todo_widget.dart';
+import 'package:todos_fetch_data_with_bloc/widgets/todo_list_view.dart';
+import 'package:todos_fetch_data_with_bloc/widgets/todo_list_view_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,12 +12,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text("ToDo's"),
       ),
       body: Center(
-        child: ListView.builder(
-          itemCount: 20,
-          itemBuilder: (context, index) {
-          return const CustomTodo();
-        },
-        ),
+        child: TodoListViewBuilder(),
       ),
     );
   }

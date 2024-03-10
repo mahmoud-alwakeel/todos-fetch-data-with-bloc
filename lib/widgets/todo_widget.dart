@@ -11,9 +11,9 @@ class CustomTodo extends StatelessWidget {
           leading: CircleAvatar(
             backgroundColor: Colors.purple[400], 
             radius: 22,
-            child: Text(todoModel.id.toString(), style: TextStyle(color: Colors.white),),),
+            child: Text(todoModel.id.toString(), style: const TextStyle(color: Colors.white),),),
           title: Text(todoModel.title),
-          trailing: todoModel.isCompleted ? const Icon(Icons.done) : null,
+          trailing: todoModel.isCompleted ? const Icon(Icons.done, color: Colors.purple,) : null,
         );
   }
 }

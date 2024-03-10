@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todos_fetch_data_with_bloc/bloc/todo_bloc.dart';
+import 'package:todos_fetch_data_with_bloc/network_services/todo_service.dart';
 import 'package:todos_fetch_data_with_bloc/screens/home_screen.dart';
 
 void main() {
@@ -11,11 +14,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+    return  BlocProvider(
+      create: (context) => TodoBloc(todoService: TodoService())..add(getAllTodosEvent()),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
     );
   }
 }
-
-

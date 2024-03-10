@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todos_fetch_data_with_bloc/widgets/todo_list_view.dart';
-import 'package:todos_fetch_data_with_bloc/widgets/todo_list_view_builder.dart';
+import 'package:todos_fetch_data_with_bloc/widgets/todo_body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,8 +10,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("ToDo's"),
       ),
-      body: Center(
-        child: TodoListViewBuilder(),
+      body: const Center(
+        child: TodosBody(),
       ),
     );
   }

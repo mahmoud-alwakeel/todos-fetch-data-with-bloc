@@ -9,10 +9,11 @@ class CustomTodo extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
           leading: CircleAvatar(
-            backgroundColor: Colors.blue, 
+            backgroundColor: Colors.purple[400], 
             radius: 22,
-            child: Text(todoModel.id.toString()),),
+            child: Text(todoModel.id.toString(), style: TextStyle(color: Colors.white),),),
           title: Text(todoModel.title),
+          trailing: todoModel.isCompleted ? const Icon(Icons.done) : null,
         );
   }
 }
